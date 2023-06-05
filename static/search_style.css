@@ -1,0 +1,56 @@
+/* Style for header */
+header {
+    background-color: #0f2ceb;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style for form */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for label */
+  label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  /* Style for input[type="text"] */
+  input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for select */
+  select {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for button */
+  button {
+    background-color: #cd1111;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style for button:hover */
+  button:hover {
+    background-color: #45a049;
+  }
+  
