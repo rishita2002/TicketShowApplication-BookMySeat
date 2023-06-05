@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Allocate Show to Venue</title>
+	<style>
+		.container {
+			max-width: 500px;
+			margin: auto;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		label {
+			margin-top: 10px;
+		}
+
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px grey;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Add Show to Venue</h1>
+		<form method="post" action="{{ url_for('admin_allocate_show') }}">
+            <label for="name">Venue ID:</label>
+			<input type="text" id="name" name="venue_id"><br> 
+
+			<label for="name">Show ID:</label>
+			<input type="text" id="name" name="show_id"><br>
+
+		
+
+			<input type="submit" value="Add the Show to Venue">
+		</form>
+	</div>
+</body>
+</html>

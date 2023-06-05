@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show Booking</title>
+    <link rel="stylesheet" type="text/css" href="/static/booking_style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Book your Favorite Shows</h1>
+    </div>
+    <div class="container">
+      <p>Select a show to book tickets:</p>
+      <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+
+        <label for="show">Show Name/Title:</label>
+        <select name="show_name" id="show">
+          {%for show in shows%}
+          <option value="{{show['show_name']}}">{{show['show_name']}}</option>
+          {%endfor%}
+          <!--<option value="2023-04-02">April 2, 2023</option>
+          <option value="2023-04-03">April 3, 2023</option>-->
+        </select>
+        <br><br>
+        <label for="venue">Venue Name:</label>
+        <select name="venue_name" id="venue">
+          {%for venue in venues%}
+          <option value="{{venue['venue_name']}}">{{venue['venue_name']}}</option>
+          {%endfor%}
+        </select>
+        <br><br>
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" name="tickets" id="tickets" min="1" max="1000">
+        <br><br>
+        <input type="submit" value="Book Tickets">
+      </form>
+      <div class="message">
+        <!-- Display any success or error messages her -->
+      </div>
+    </div>
+  </body>
+</html>
+

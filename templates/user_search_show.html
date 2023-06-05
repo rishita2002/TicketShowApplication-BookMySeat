@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Shows</title>
+    <link rel="stylesheet" href="/static/search_style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Search for your Favorite Shows</h1>
+    </header>
+    <main>
+
+        <form method="post" action="{{ url_for('user_search_show') }}">
+            <label for="rating">Rating (Out of 5):</label>
+            <select id="rating" name="rating">
+                <option value="1">Above 1</option>
+                <option value="2">Above 2</option>
+                <option value="3">Above 3</option>
+                <option value="4">Above 4</option>
+            </select>
+            <button type="submit">Search Movies</button>
+        </form>
+
+        <p><b>Search result based on your filter</b></p>
+        <p><b>Rating above: {{rating}}</b></p>
+        {%for show in shows%}
+        <p>{{show['show_name']}}   <b>Rating : {{show['rating']}}</b></p>
+        {%endfor%}
+
+
+    </main>
+</body>
+
+</html>

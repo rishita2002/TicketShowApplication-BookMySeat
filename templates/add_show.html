@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Show</title>
+	<style>
+		.container {
+			max-width: 500px;
+			margin: auto;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		label {
+			margin-top: 10px;
+		}
+
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px grey;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Add New Show</h1>
+		<form method="post" action="{{ url_for('admin_add_show') }}">
+            <label for="name">Show ID:</label>
+			<input type="text" id="name" name="show_id"><br> 
+
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="show_name"><br>
+
+			<label for="address">Rating (Out of 5):</label>
+			<input type="text" id="address" name="rating"><br>
+
+            <label for="name">Tags:</label>
+			<input type="text" id="name" name="tag"><br>
+
+            <label for="name">Ticket Price:</label>
+			<input type="text" id="name" name="price"><br>
+
+
+			<input type="submit" value="Add this Show">
+		</form>
+	</div>
+</body>
+</html>

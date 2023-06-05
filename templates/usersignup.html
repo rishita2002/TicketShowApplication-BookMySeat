@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>User Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 179, 56);
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 500px;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .container {
+        padding: 16px;
+      }
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Sign Up</h1>
+    <form method="post" action="{{ url_for('usersignup') }}">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Name" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label for="password-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+
+        <button type="submit"> Sign Up</button>
+    
+      Are you already a user of BookMySeat? <a href="/userlogin">Login</a>
+      </form>
+  </body>
+</html>

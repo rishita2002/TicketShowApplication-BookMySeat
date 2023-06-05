@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BookMySeat</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f5f5f5;
+}
+  
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    background: linear-gradient(to right, orange, yellow, orange);
+    background-position: top;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background-color: rgb(222, 0, 37);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #2513ed;
+    color: #9e3030;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding: 20px;
+    color: #f5f5f5;
+    background-color: #5e28db;
+    border-left:5px solid #ddd;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+footer {
+    clear: both;
+    background-color: #f5f5f5;
+}
+  
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>BookMySeat</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/adminlogin">Admin Login</a></li>
+                <li><a href="/userlogin">Login</a></li>
+                <li><a href="/usersignup">Sign Up</a></li>
+            </ul>
+        </nav>
+
+        <section class="main">
+              
+            <h2>Welcome to BookMySeat</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="/static/audience-sitting-cinema-hall-watching-movie-flat-illustration_1284-65925.avif" alt="venue" />
+                          
+					    <p>Browse through a wide range of movies currently in cinema and choose the one that suits you best.</p>
+					    <p>Book your tickets in advance and avoid the last-minute rush. We offer a secure and hassle-free booking experience.</p>
+                    </div>
+                </div>
+        </section>
+        <aside>
+            <b>Here are some of the top rated shows currently running in the BookMySeat venues</b>
+            <br>
+            <br>
+            {%for show in shows%}
+            <p>{{show['show_name']}}</p>
+            {%endfor%}	
+        </aside>
+    </div>
+
+</body>
+</html>
+

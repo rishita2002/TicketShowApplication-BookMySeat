@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Shows</title>
+    <link rel="stylesheet" href="/static/search_style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Search for your Favorite Shows</h1>
+    </header>
+    <main>
+
+
+        <form method="post" action="{{ url_for('user_search_tag') }}">
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags">
+            <button type="submit">Search Movies by tag(s)</button>
+        </form>
+
+        <p><b>Search result based on your filter</b></p>
+        <p><b>Tag (s): {{tag_name}}</b></p>
+        {%for tag in tags%}
+        <p>{{tag['show_name']}}</p>
+        {%endfor%}
+
+    </main>
+</body>
+
+</html>
