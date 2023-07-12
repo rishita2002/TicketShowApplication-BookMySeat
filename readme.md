@@ -1,5 +1,11 @@
 TICKET SHOW APPLICATION
 
+Ticket Show Application is multi-user app that enables user to book show tickets and admin of the 
+website can create, edit, remove shows and venues and also allocate shows to venues. Each venue has 
+capacity and each shows have ratings, tags (optional). User can also see top rated shows and all the 
+venues in their dashboard. User can also search venues in their location, search shows based on rating 
+and on the basis of tags
+
 -> open new terminal
 -> write cd folder path
 -> installing virtual environment
